@@ -1,0 +1,71 @@
+< reserved word , int >
+< reserved word , main >
+< other symbol , ( >
+< other symbol , ) >
+< other symbol , { >
+< reserved word , int >
+< id , a id_table[0] >
+< other symbol , ; >
+< reserved word , int >
+< id , b id_table[1] >
+< operator , = >
+< number , 20 >
+< other symbol , ; >
+< reserved word , double >
+< id , c id_table[2] >
+< operator , = >
+< number , -3.14 >
+< other symbol , ; >
+< reserved word , int >
+< error , 123asc >
+< other symbol , ; >
+< reserved word , double >
+< id , d id_table[3] >
+< operator , = >
+< error , 1.1.1 >
+< other symbol , ; >
+< reserved word , if >
+< other symbol , ( >
+< id , b id_table[1] >
+< comparison , >= >
+< number , 0 >
+< other symbol , ) >
+< id , a id_table[0] >
+< operator , = >
+< id , a id_table[0] >
+< operator , + >
+< number , -3.14 >
+< other symbol , ; >
+< reserved word , for >
+< other symbol , ( >
+< reserved word , int >
+< id , i id_table[4] >
+< operator , = >
+< number , 0 >
+< other symbol , ; >
+< id , i id_table[4] >
+< comparison , < >
+< id , b id_table[1] >
+< other symbol , ; >
+< id , i id_table[4] >
+< operator , = >
+< id , i id_table[4] >
+< operator , + >
+< number , 1 >
+< other symbol , ) >
+< other symbol , { >
+< id , c id_table[2] >
+< operator , = >
+< id , c id_table[2] >
+< operator , / >
+< id , i id_table[4] >
+< operator , * >
+< id , a id_table[0] >
+< other symbol , ; >
+< other symbol , } >
+< id , printf id_table[5] >
+< other symbol , ( >
+< string , "HelloWorld!" >
+< other symbol , ) >
+< other symbol , ; >
+< other symbol , } >

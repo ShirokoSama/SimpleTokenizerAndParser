@@ -1,0 +1,138 @@
+1
+status_stack:	0 
+symbol_stack:	
+input:		a + 3 * b + 3.15 * xxx $ 
+action:		shift
+----------------------------------------
+2
+status_stack:	0 5 
+symbol_stack:	a 
+input:		+ 3 * b + 3.15 * xxx $ 
+action:		reduce by F -> a
+----------------------------------------
+3
+status_stack:	0 3 
+symbol_stack:	F 
+input:		+ 3 * b + 3.15 * xxx $ 
+action:		reduce by T -> F
+----------------------------------------
+4
+status_stack:	0 2 
+symbol_stack:	T 
+input:		+ 3 * b + 3.15 * xxx $ 
+action:		reduce by E -> T
+----------------------------------------
+5
+status_stack:	0 1 
+symbol_stack:	E 
+input:		+ 3 * b + 3.15 * xxx $ 
+action:		shift
+----------------------------------------
+6
+status_stack:	0 1 6 
+symbol_stack:	E + 
+input:		3 * b + 3.15 * xxx $ 
+action:		shift
+----------------------------------------
+7
+status_stack:	0 1 6 5 
+symbol_stack:	E + 3 
+input:		* b + 3.15 * xxx $ 
+action:		reduce by F -> a
+----------------------------------------
+8
+status_stack:	0 1 6 3 
+symbol_stack:	E + F 
+input:		* b + 3.15 * xxx $ 
+action:		reduce by T -> F
+----------------------------------------
+9
+status_stack:	0 1 6 9 
+symbol_stack:	E + T 
+input:		* b + 3.15 * xxx $ 
+action:		shift
+----------------------------------------
+10
+status_stack:	0 1 6 9 7 
+symbol_stack:	E + T * 
+input:		b + 3.15 * xxx $ 
+action:		shift
+----------------------------------------
+11
+status_stack:	0 1 6 9 7 5 
+symbol_stack:	E + T * b 
+input:		+ 3.15 * xxx $ 
+action:		reduce by F -> a
+----------------------------------------
+12
+status_stack:	0 1 6 9 7 10 
+symbol_stack:	E + T * F 
+input:		+ 3.15 * xxx $ 
+action:		reduce by T -> T * F
+----------------------------------------
+13
+status_stack:	0 1 6 9 
+symbol_stack:	E + T 
+input:		+ 3.15 * xxx $ 
+action:		reduce by E -> E + T
+----------------------------------------
+14
+status_stack:	0 1 
+symbol_stack:	E 
+input:		+ 3.15 * xxx $ 
+action:		shift
+----------------------------------------
+15
+status_stack:	0 1 6 
+symbol_stack:	E + 
+input:		3.15 * xxx $ 
+action:		shift
+----------------------------------------
+16
+status_stack:	0 1 6 5 
+symbol_stack:	E + 3.15 
+input:		* xxx $ 
+action:		reduce by F -> a
+----------------------------------------
+17
+status_stack:	0 1 6 3 
+symbol_stack:	E + F 
+input:		* xxx $ 
+action:		reduce by T -> F
+----------------------------------------
+18
+status_stack:	0 1 6 9 
+symbol_stack:	E + T 
+input:		* xxx $ 
+action:		shift
+----------------------------------------
+19
+status_stack:	0 1 6 9 7 
+symbol_stack:	E + T * 
+input:		xxx $ 
+action:		shift
+----------------------------------------
+20
+status_stack:	0 1 6 9 7 5 
+symbol_stack:	E + T * xxx 
+input:		$ 
+action:		reduce by F -> a
+----------------------------------------
+21
+status_stack:	0 1 6 9 7 10 
+symbol_stack:	E + T * F 
+input:		$ 
+action:		reduce by T -> T * F
+----------------------------------------
+22
+status_stack:	0 1 6 9 
+symbol_stack:	E + T 
+input:		$ 
+action:		reduce by E -> E + T
+----------------------------------------
+23
+status_stack:	0 1 
+symbol_stack:	E 
+input:		$ 
+action:		Accept!
+----------------------------------------

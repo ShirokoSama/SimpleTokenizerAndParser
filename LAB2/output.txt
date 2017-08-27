@@ -1,0 +1,89 @@
+1
+status_stack:	0 
+symbol_stack:	
+input:		a+a*a+$
+action:		shift
+----------------------------------------
+2
+status_stack:	0 5 
+symbol_stack:	a 
+input:		+a*a+$
+action:		reduce by F -> a
+----------------------------------------
+3
+status_stack:	0 3 
+symbol_stack:	F 
+input:		+a*a+$
+action:		reduce by T -> F
+----------------------------------------
+4
+status_stack:	0 2 
+symbol_stack:	T 
+input:		+a*a+$
+action:		reduce by E -> T
+----------------------------------------
+5
+status_stack:	0 1 
+symbol_stack:	E 
+input:		+a*a+$
+action:		shift
+----------------------------------------
+6
+status_stack:	0 1 6 
+symbol_stack:	E + 
+input:		a*a+$
+action:		shift
+----------------------------------------
+7
+status_stack:	0 1 6 5 
+symbol_stack:	E + a 
+input:		*a+$
+action:		reduce by F -> a
+----------------------------------------
+8
+status_stack:	0 1 6 3 
+symbol_stack:	E + F 
+input:		*a+$
+action:		reduce by T -> F
+----------------------------------------
+9
+status_stack:	0 1 6 9 
+symbol_stack:	E + T 
+input:		*a+$
+action:		shift
+----------------------------------------
+10
+status_stack:	0 1 6 9 7 
+symbol_stack:	E + T * 
+input:		a+$
+action:		shift
+----------------------------------------
+11
+status_stack:	0 1 6 9 7 5 
+symbol_stack:	E + T * a 
+input:		+$
+action:		reduce by F -> a
+----------------------------------------
+12
+status_stack:	0 1 6 9 7 10 
+symbol_stack:	E + T * F 
+input:		+$
+action:		reduce by T -> T * F
+----------------------------------------
+13
+status_stack:	0 1 6 9 
+symbol_stack:	E + T 
+input:		+$
+action:		reduce by E -> E + T
+----------------------------------------
+14
+status_stack:	0 1 
+symbol_stack:	E 
+input:		+$
+action:		shift
+----------------------------------------
+15
+status_stack:	0 1 6 
+symbol_stack:	E + 
+input:		$
+ERROR!
